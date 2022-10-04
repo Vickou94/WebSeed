@@ -12,6 +12,11 @@ class MainController extends Controller
 
        $products = Products::all(); 
 
-        return view('shop/index', compact('products'));
+        return view('shop.index', compact('products'));
+    }
+
+    public function product() {
+        dd($_GET);
+        return view('shop.product');
     }
 }

@@ -12,10 +12,10 @@
                   <p class="card-text">{{$product->description}}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Voir</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
+                    <small class="text-muted">{{number_format($product->price_ht, 2)}}€</small>
                   </div>
                 </div>
               </div>

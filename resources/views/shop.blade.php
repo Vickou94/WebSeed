@@ -20,19 +20,10 @@
   </head>
 
   <body>
+
 @include('layouts.header')
-    <main role="main">
 
-      <section class="jumbotron text-center">
-        <div class="container bg-banner">
-          <h1 class="jumbotron-heading text-light">WebSeed</h1>
-          <p class="lead text-light">Une sélection des meilleures plantes grasses pour habiller votre intérieur selon vos envies du moment.</p>
-        </div>
-      </section>
-
-      @yield('content')
-
-    </main>
+@yield('content')
 
 @include('layouts.footer')
 
