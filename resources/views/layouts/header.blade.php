@@ -19,13 +19,15 @@
       </div>
       <div class="navbar navbar-dark bg-nav box-shadow">
         <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
+          <a href="{{route('homepage')}}" class="navbar-brand d-flex align-items-center">
             <strong><i class="fa-brands fa-pagelines mx-3"></i>WebSeed</strong>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="text-light" href="#"><i class="fas fa-cart-shopping mx-1"></i>Panier</a>
+          <a class="text-light" href="#"><i class="fas fa-book mx-1"></i>S'inscrire</a>
+          <a class="text-light" href="#"><i class="fas fa-user mx-1"></i>Se connecter</a>
+          <a class="text-light" href="{{route('cart')}}"><i class="fas fa-cart-shopping mx-1"></i>Panier</a>
         </div>
       </div>
     </header>

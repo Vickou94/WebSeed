@@ -12,8 +12,8 @@
                   <p class="card-text">{{$product->description}}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Voir</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      <a href="{{route('see_product',[$product->id])}}" class="btn btn-sm btn-outline-secondary">Voir</a>
+                      <a href="#" class="btn btn-sm btn-outline-secondary">Ajouter au panier</a>
                     </div>
                     <small class="text-muted">{{number_format($product->price_ht, 2)}}€</small>
                   </div>

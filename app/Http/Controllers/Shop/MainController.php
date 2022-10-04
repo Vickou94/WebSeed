@@ -15,8 +15,15 @@ class MainController extends Controller
         return view('shop.index', compact('products'));
     }
 
-    public function product() {
-        dd($_GET);
-        return view('shop.product');
+    public function product(Request $request) {
+
+        $product = Products::find($request->id);
+
+        return view('shop.product', compact('product'));
+    }
+
+    public function cart() {
+
+        return view('shop.cart');
     }
 }

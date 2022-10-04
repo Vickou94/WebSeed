@@ -13,12 +13,16 @@
 
   .bg-banner {
     background-color: rgba(0, 0, 0, .5);
-    border: forestgreen 8px solid;
+    border: #228B22 8px solid;
     border-radius: 70px;
   }
 
   .btn-sm:hover {
-    background-color: forestgreen;
+    background-color: #343a40;
+  }
+
+  .btn-cart:hover {
+    background-color: #343a40;
   }
 
   @media (min-width: 768px) {
@@ -41,12 +45,14 @@
   }
 
   .bg-nav {
-    background-color: forestgreen;
+    background-color: #228B22;
   }
   
   footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    background-color: #228B22;
+    border-top: 2px solid black;
   }
   
   footer p {
