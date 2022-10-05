@@ -30,7 +30,7 @@
           <a class="text-light" href="{{route('login')}}"><i class="fas fa-user mx-1"></i>Se connecter</a>
           @endif
           @if(Auth::check())
-          <a class="text-light" href="{{route('cart')}}"><i class="fas fa-cart-shopping mx-1"></i>Panier</a>
+          <a class="text-light" href="{{route('cart.list')}}"><i class="fas fa-cart-shopping mx-1"></i>Panier</a>
           <a class="text-light btn-logout" href="{{route('logout')}}"><i class="fas fa-right-from-bracket mx-1"></i>Se déconnecter</a>
           <form id="logout-form" action="{{route('logout')}}" method="POST" style="display:none;">
           @csrf

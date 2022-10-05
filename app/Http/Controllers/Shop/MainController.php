@@ -21,9 +21,4 @@ class MainController extends Controller
 
         return view('shop.product', compact('product'));
     }
-
-    public function cart() {
-
-        return view('shop.cart');
-    }
 }

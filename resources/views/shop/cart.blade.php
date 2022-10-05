@@ -3,7 +3,11 @@
 <main role="main">
     <section class="py-5">
         <div class="container">
-                <h1 class="jumbotron-heading"> <span class="badge badge-success ">Votre panier </span></h1>
+                <h1 class="jumbotron-heading"> <span class="badge badge-success">Votre panier </span></h1>
+                <form action="{{ route('cart.clear') }}" method="POST">
+                                  @csrf
+                                <button class="badge badge-danger border-0 mb-2 py-2">Vider le panier</button>
+                                </form>
             <table class="table table-bordered table-responsive-sm">
                 <thead>
                     <tr>
@@ -24,6 +28,11 @@
                     <td>
 <input style="display: inline-block" id="qte" class="form-control col-sm-4" type="number" value="1">
                                 <a class="pl-2" href=""><i class="fas fa-sync"></i></a>
+                                <form action="{{ route('cart.remove') }}" method="POST">
+                                  @csrf
+                                  <input type="hidden" value="{{ $item->id }}" name="id">
+                                <button class="pl-2 text-danger border-0 bg-transparent"><i class="fas fa-trash"></i></button>
+                                </form>
                     </td>
                     <td>
                     {{ number_format($item->price,2) }}€
