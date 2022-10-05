@@ -9,9 +9,9 @@
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Contact</h4>
               <ul class="list-unstyled">
-                <li><a href="#" class="text-white"><i class="fas fa-envelope mx-1"></i>Email</a></li>
-                <li><a href="#" class="text-white"><i class="fa-brands fa-linkedin mx-1"></i>LinkedIn</a></li>
-                <li><a href="#" class="text-white"><i class="fa-brands fa-github mx-1"></i>GitHub</a></li>
+                <li><a href="mailto:victor.noel@outlook.fr" target="_blank" class="text-white"><i class="fas fa-envelope mx-1"></i>Email</a></li>
+                <li><a href="https://www.linkedin.com/in/victor-no%C3%ABl-440b8521a/" target="_blank" class="text-white"><i class="fa-brands fa-linkedin mx-1"></i>LinkedIn</a></li>
+                <li><a href="https://github.com/Vickou94" target="_blank" class="text-white"><i class="fa-brands fa-github mx-1"></i>GitHub</a></li>
               </ul>
             </div>
           </div>
@@ -25,9 +25,16 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="text-light" href="#"><i class="fas fa-book mx-1"></i>S'inscrire</a>
-          <a class="text-light" href="#"><i class="fas fa-user mx-1"></i>Se connecter</a>
+          @if(!Auth::check())
+          <a class="text-light" href="{{route('register')}}"><i class="fas fa-book mx-1"></i>S'inscrire</a>
+          <a class="text-light" href="{{route('login')}}"><i class="fas fa-user mx-1"></i>Se connecter</a>
+          @endif
+          @if(Auth::check())
           <a class="text-light" href="{{route('cart')}}"><i class="fas fa-cart-shopping mx-1"></i>Panier</a>
+          <a class="text-light" href="{{route('logout')}}" onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();"><i class="fas fa-right-from-bracket mx-1"></i>Se déconnecter</a>
+          <form id="logout-form" action="{{route('logout')}}" method="POST" style="display:none;">@csrf</form>
+          @endif
         </div>
       </div>
     </header>

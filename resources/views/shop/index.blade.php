@@ -2,6 +2,13 @@
 @section('content')
 <div class="album py-5 bg-light">
         <div class="container">
+          
+        @if(Auth::check())
+            <div class="alert alert-success text-center" role="alert">
+            Bienvenue {{ Auth::user()->name }}, tu peux désormais commencer à faire tes achats.
+              </div>
+        @endif
+
           <div class="row">
               @foreach($products as $product)
             <div class="col-md-4">

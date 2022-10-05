@@ -13,6 +13,9 @@
                     <h5>{{number_format($product->price_ht,2)}}€</h5>
                     <p class="lead text-muted pb-5">{{$product->description}}</p>
                     <p>
+                    <label for="qte">Quantité :</label>
+                                <input type="number" min="1" name="qte" autocomplete="off" value="1"
+                                       class="form-control">
                     <button class="btn btn-cart my-2 btn-block"><i class="fas fa-shopping-cart"></i>
                                 Ajouter au Panier</button>
                     </p>
@@ -31,7 +34,7 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-end">
                                 <div class="btn-group">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
+                                    <a href="http://127.0.0.1:8000/produit/12" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +46,7 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-end">
                                 <div class="btn-group">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
+                                    <a href="http://127.0.0.1:8000/produit/13" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +58,7 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-end">
                                 <div class="btn-group">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
+                                    <a href="http://127.0.0.1:8000/produit/17" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
                                 </div>
                             </div>
                         </div>
