@@ -31,9 +31,10 @@
           @endif
           @if(Auth::check())
           <a class="text-light" href="{{route('cart')}}"><i class="fas fa-cart-shopping mx-1"></i>Panier</a>
-          <a class="text-light" href="{{route('logout')}}" onclick="event.preventDefault();
-          document.getElementById('logout-form').submit();"><i class="fas fa-right-from-bracket mx-1"></i>Se déconnecter</a>
-          <form id="logout-form" action="{{route('logout')}}" method="POST" style="display:none;">@csrf</form>
+          <a class="text-light btn-logout" href="{{route('logout')}}"><i class="fas fa-right-from-bracket mx-1"></i>Se déconnecter</a>
+          <form id="logout-form" action="{{route('logout')}}" method="POST" style="display:none;">
+          @csrf
+          </form>
           @endif
         </div>
       </div>

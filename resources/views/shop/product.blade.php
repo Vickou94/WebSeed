@@ -12,6 +12,7 @@
                     <h1 class="jumbotron-heading pb-5">{{$product->name}}</h1>
                     <h5>{{number_format($product->price_ht,2)}}€</h5>
                     <p class="lead text-muted pb-5">{{$product->description}}</p>
+                    @if(Auth::check())
                     <p>
                     <label for="qte">Quantité :</label>
                                 <input type="number" min="1" name="qte" autocomplete="off" value="1"
@@ -19,6 +20,7 @@
                     <button class="btn btn-cart my-2 btn-block"><i class="fas fa-shopping-cart"></i>
                                 Ajouter au Panier</button>
                     </p>
+                    @endif
                 </div>
             </div>
         </div>

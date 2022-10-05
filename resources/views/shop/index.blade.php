@@ -20,7 +20,9 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a href="{{route('see_product',[$product->id])}}" class="btn btn-sm btn-outline-secondary">Voir</a>
+                      @if(Auth::check())
                       <a href="#" class="btn btn-sm btn-outline-secondary">Ajouter au panier</a>
+                      @endif
                     </div>
                     <small class="text-muted">{{number_format($product->price_ht, 2)}}€</small>
                   </div>
