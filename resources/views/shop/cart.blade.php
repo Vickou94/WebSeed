@@ -14,31 +14,31 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($cartItems as $item)
                 <tr>
                     <td>
-                        <img width="110" class="rounded-circle img-thumbnail" src="produits/goonies.jpg" alt="">
-                        T-Shirt Les Goonies
+                        <img width="110" class="rounded-circle img-thumbnail"
+                        src="{{ asset('img/products/'.$item->attributes->image) }}" alt="Produit">
+                        {{ $item->name }}
                     </td>
                     <td>
-
-                                <input style="display: inline-block" id="qte" class="form-control col-sm-4" type="number" value="1">
-
-
-                                <a  class="pl-2" href=""><i class="fas fa-sync"></i> </a>
+<input style="display: inline-block" id="qte" class="form-control col-sm-4" type="number" value="1">
+                                <a class="pl-2" href=""><i class="fas fa-sync"></i></a>
                     </td>
                     <td>
-                        29.00 €
+                    {{ number_format($item->price,2) }}€
                     </td>
                     <td>
-                        29.00 €
+                    {{ number_format($item->price,2) }}€
                     </td>
                 </tr>
+                @endforeach
                 </tbody>
                 <tfoot>
                 <tr>
                     <td colspan="2"></td>
                     <td>Total HT</td>
-                    <td>24.17 €</td>
+                    <td>28.00€</td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>

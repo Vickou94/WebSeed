@@ -21,7 +21,15 @@
                     <div class="btn-group">
                       <a href="{{route('see_product',[$product->id])}}" class="btn btn-sm btn-outline-secondary">Voir</a>
                       @if(Auth::check())
-                      <a href="#" class="btn btn-sm btn-outline-secondary">Ajouter au panier</a>
+                      <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" value="{{ $product->id }}" name="id">
+                        <input type="hidden" value="{{ $product->name }}" name="name">
+                        <input type="hidden" value="{{ $product->price_ht }}" name="price">
+                        <input type="hidden" value="{{ $product->picture }}"  name="image">
+                        <input type="hidden" value="1" name="quantity">
+                      <button class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
                       @endif
                     </div>
                     <small class="text-muted">{{number_format($product->price_ht, 2)}}€</small>
