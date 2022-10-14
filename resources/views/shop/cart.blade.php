@@ -3,6 +3,14 @@
 <main role="main">
     <section class="py-5 cart_section">
         <div class="container">
+            @if(Cart::isEmpty())
+            <div class="col-sm-12 empty-cart-cls text-center">
+                <img src="{{asset('img/empty.png')}}" class="img-fluid mb-4 mr-3">
+                <h3><strong>Votre panier est vide</strong></h3>
+                <h4>Commencez vous achats ci-dessous :)</h4>
+                <a href="{{route('homepage')}}" class="btn btn-success cart-btn-transform m-3" data-abc="true">Retour à l'accueil</a>
+            </div>
+            @else
             <h1 class="jumbotron-heading"> <span class="badge badge-success">Votre panier </span></h1>
             <form action="{{ route('cart.clear') }}" method="POST">
                 @csrf
@@ -19,7 +27,6 @@
                 </thead>
                 <tbody>
                     @foreach ($cartItems as $item)
-                    
                     <tr>
                         <td>
                             <img width="110" class="rounded-circle img-thumbnail" src="{{ asset('img/products/'.$item->attributes->image) }}" alt="Produit">
@@ -28,16 +35,15 @@
                         <td class="w-25">
                             <form action="{{ route('cart.update') }}" method="POST">
                                 @csrf
-                                <input style="display: inline-block" id="qte" name="quantity" class="form-control col-sm-4" type="number" value="{{ $item->quantity }}">
-                                <input type="hidden" value="{{ $item->quantity }}" name="quantity">
+                                <input style="display: inline-block" name="quantity" class="form-control col-sm-4" type="number" value="{{ $item->quantity }}">
+                                <input type="hidden" value="{{ $item->id }}" name="id">
                                 <br>
-                                <button class="pl-2 border-0 bg-transparent" href=""><i class="fas fa-sync"></i></button>
+                                <button class="pl-2 border-0 bg-transparent pt-2" href=""><i class="fas fa-sync mx-1"></i>Valider quantité</button>
                             </form>
-                           
                             <form action="{{ route('cart.remove') }}" method="POST">
                                 @csrf
                                 <input type="hidden" value="{{ $item->id }}" name="id">
-                                <button class="pl-2 text-danger border-0 bg-transparent"><i class="fas fa-trash"></i></button>
+                                <button class="pl-2 text-danger border-0 bg-transparent"><i class="fas fa-trash mx-1"></i>Supprimer l'article</button>
                             </form>
                         </td>
                         <td>
@@ -71,6 +77,7 @@
                 @csrf
                 <button class="btn btn-block btn-outline-dark" type="submit">Commander</button>
             </form>
+            @endif
         </div>
     </section>
 </main>

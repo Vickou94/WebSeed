@@ -11,7 +11,6 @@ class CartController extends Controller
     public function cartList()
     {
         $cartItems = \Cart::getContent();
-        
         $condition = new \Darryldecode\Cart\CartCondition(array(
             'name' => 'VAT 20%',
             'type' => 'tax',
@@ -43,7 +42,8 @@ class CartController extends Controller
             )
         ]);
 
-        return redirect()->route('cart.list');
+        session()->flash('success', 'Produit ajouté au panier');
+        return redirect()->route('homepage');
     }
 
     public function updateCart(Request $request)
