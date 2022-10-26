@@ -1,0 +1,49 @@
+main {
+  position: relative;
+  min-height: 80vh;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #228B22;
+  border-top: 2px solid black;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.img-fluid {
+  width: 55%;
+}
+
+.cell-1 {
+  border-collapse: separate;
+  border-spacing: 0 4em;
+  background: #fff;
+  border-bottom: 5px solid transparent;
+  background-clip: padding-box;
+}
+
+.btn_view {
+  cursor: pointer;
+}
+
+thead {
+  background: #dddcdc;
+}
+
+.page-link {
+  color: #228B22 !important;
+}
+
+.page-item.active .page-link {
+  background-color: #228B22 !important;
+  border-color: #228B22 !important;
+  color: #fff !important;
+}

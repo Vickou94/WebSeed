@@ -7,7 +7,7 @@
             <div class="col-sm-12 empty-cart-cls text-center">
                 <img src="{{asset('img/empty.png')}}" class="img-fluid mb-4 mr-3">
                 <h3><strong>Votre panier est vide</strong></h3>
-                <h4>Commencez vous achats ci-dessous :)</h4>
+                <h4>Commencez vos achats ci-dessous :)</h4>
                 <a href="{{route('homepage')}}" class="btn btn-success cart-btn-transform m-3" data-abc="true">Retour à l'accueil</a>
             </div>
             @else
@@ -37,13 +37,12 @@
                                 @csrf
                                 <input style="display: inline-block" name="quantity" class="form-control col-sm-4" type="number" value="{{ $item->quantity }}">
                                 <input type="hidden" value="{{ $item->id }}" name="id">
-                                <br>
-                                <button class="pl-2 border-0 bg-transparent pt-2" href=""><i class="fas fa-sync mx-1"></i>Valider quantité</button>
+                                <p><button class="pl-2 border-0 bg-transparent pt-2" href=""><i class="fas fa-sync mx-1"></i>Valider quantité</button></p>
                             </form>
                             <form action="{{ route('cart.remove') }}" method="POST">
                                 @csrf
                                 <input type="hidden" value="{{ $item->id }}" name="id">
-                                <button class="pl-2 text-danger border-0 bg-transparent"><i class="fas fa-trash mx-1"></i>Supprimer l'article</button>
+                                <p><button class="pl-2 text-danger border-0 bg-transparent"><i class="fas fa-trash mx-1"></i>Supprimer l'article</button></p>
                             </form>
                         </td>
                         <td>

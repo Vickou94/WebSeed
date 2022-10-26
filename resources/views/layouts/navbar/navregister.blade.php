@@ -1,0 +1,1 @@
+<a class="text-light" href="{{route('register')}}"><i class="fas fa-book mx-1"></i>S'inscrire</a>

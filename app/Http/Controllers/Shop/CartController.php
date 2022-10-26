@@ -42,7 +42,7 @@ class CartController extends Controller
             )
         ]);
 
-        session()->flash('success', 'Produit ajouté au panier');
+        session()->flash('success', 'Votre article a bien été ajouté au panier !');
         return redirect()->route('homepage');
     }
 

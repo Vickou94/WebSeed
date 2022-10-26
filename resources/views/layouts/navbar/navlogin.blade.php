@@ -1,0 +1,1 @@
+<a class="text-light" href="{{route('login')}}"><i class="fas fa-user mx-1"></i>Se connecter</a>

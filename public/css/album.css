@@ -2,8 +2,13 @@
   --jumbotron-padding-y: 3rem;
 }
 
+main {
+  position: relative;
+  min-height: 85vh;
+}
+
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
@@ -38,6 +43,10 @@ footer p {
 
 .btn-cart:hover {
   background-color: silver;
+}
+
+#logout-form {
+  display: none;
 }
 
 @media (min-width: 768px) {

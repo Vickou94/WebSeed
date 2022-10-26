@@ -5,3 +5,4 @@ function logoutfunction() {
 
 let logout = document.querySelector('.btn-logout');
 logout.addEventListener('click', logoutfunction);
+

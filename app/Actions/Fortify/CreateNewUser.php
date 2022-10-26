@@ -22,6 +22,7 @@ class CreateNewUser implements CreatesNewUsers
     {
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
+            'firstname' => ['required', 'string', 'max:255'],
             'email' => [
                 'required',
                 'string',
@@ -29,12 +30,19 @@ class CreateNewUser implements CreatesNewUsers
                 'max:255',
                 Rule::unique(User::class),
             ],
+            'address' => ['required', 'string', 'max:255'],
+            'city' => ['required', 'string', 'max:255'],
+            'zipcode' => ['required', 'integer'],
             'password' => $this->passwordRules(),
         ])->validate();
 
         return User::create([
             'name' => $input['name'],
+            'firstname' => $input['firstname'],
             'email' => $input['email'],
+            'address' => $input['address'],
+            'city' => $input['city'],
+            'zipcode' => $input['zipcode'],
             'password' => Hash::make($input['password']),
         ]);
     }

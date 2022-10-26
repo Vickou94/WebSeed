@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -15,36 +16,28 @@
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+    <link href="{{asset('css/order.css')}}" rel="stylesheet">
     <link href="{{asset('css/shop.css')}}" rel="stylesheet">
-    <link href="{{asset('css/album.css')}}" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  </head>
+</head>
 
-  <body>
-@include('layouts.header')
+<body>
+    @include('layouts.header')
     <main role="main">
 
-      <section class="jumbotron text-center">
-        <div class="container bg-banner">
-          <h1 class="jumbotron-heading text-light">WebSeed</h1>
-          <p class="lead text-light">Une sélection des meilleures plantes grasses pour habiller votre intérieur selon vos envies du moment.</p>
-        </div>
-      </section>
-
-      @yield('content')
-
+        @yield('content')
     </main>
-
-@include('layouts.footer')
-
+    @include('layouts.footer')
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="{{asset('js/auth.js')}}"></script>
+    <script src="{{asset('js/order.js')}}"></script>
     <script src="{{asset('js/popper.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/holder.min.js')}}"></script>
-  </body>
+</body>
+
 </html>

@@ -1,0 +1,1 @@
+<a class="text-light" href="{{route('cart.list')}}"><i class="fas fa-cart-shopping mx-1"></i>Panier</a>

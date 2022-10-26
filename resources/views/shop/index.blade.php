@@ -2,21 +2,16 @@
 @section('content')
 <div class="album py-5 bg-light">
   <div class="container">
-
     @if(Auth::check())
     <div class="alert alert-success text-center" role="alert">
-      Bienvenue {{ Auth::user()->name }}, tu peux désormais commencer à faire tes achats.
+      Bienvenue {{ Auth::user()->firstname }}, tu peux désormais commencer à faire tes achats.
     </div>
     @endif
-
     @if (session()->has('success'))
-
     <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 3000)" x-show="show" class="alert alert-success text-center" role="alert">
       {{ session('success')}}
     </div>
-
     @endif
-
     <div class="row">
       @foreach($products as $product)
       <div class="col-md-4">
