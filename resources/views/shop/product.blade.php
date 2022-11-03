@@ -46,9 +46,10 @@
                     <div class="card mb-4 box-shadow">
                         <img src="{{asset('img/products/cactus.jpg')}}" class="card-img-top img-fluid" alt="Responsive image">
                         <div class="card-body">
+                            <h3 class="jumbotron-heading pb-5">Cactus</h3>
                             <div class="d-flex justify-content-end">
                                 <div class="btn-group">
-                                    <a href="http://127.0.0.1:8000/produit/12" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
+                                    <a href="http://127.0.0.1:8000/produit/3" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -58,9 +59,10 @@
                     <div class="card mb-4 box-shadow">
                         <img src="{{asset('img/products/crassula.jpg')}}" class="card-img-top img-fluid" alt="Responsive image">
                         <div class="card-body">
+                        <h3 class="jumbotron-heading pb-5">Crassula</h3>
                             <div class="d-flex justify-content-end">
                                 <div class="btn-group">
-                                    <a href="http://127.0.0.1:8000/produit/13" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
+                                    <a href="http://127.0.0.1:8000/produit/4" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -70,9 +72,10 @@
                     <div class="card mb-4 box-shadow">
                         <img src="{{asset('img/products/rhipsalis.jpg')}}" class="card-img-top img-fluid" alt="Responsive image">
                         <div class="card-body">
+                        <h3 class="jumbotron-heading pb-5">Rhipsalis</h3>
                             <div class="d-flex justify-content-end">
                                 <div class="btn-group">
-                                    <a href="http://127.0.0.1:8000/produit/17" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
+                                    <a href="http://127.0.0.1:8000/produit/8" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></a>
                                 </div>
                             </div>
                         </div>
