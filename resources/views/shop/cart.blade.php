@@ -5,7 +5,7 @@
         <div class="container">
             @if(Cart::isEmpty())
             <div class="col-sm-12 empty-cart-cls text-center">
-                <img src="{{asset('img/empty.png')}}" class="img-fluid mb-4 mr-3">
+                <img src="{{asset('img/empty.png')}}" class="img-fluid mb-4 mr-3" alt="empty cart">
                 <h3><strong>Votre panier est vide</strong></h3>
                 <h4>Commencez vos achats ci-dessous :)</h4>
                 <a href="{{route('homepage')}}" class="btn btn-success cart-btn-transform m-3" data-abc="true">Retour à l'accueil</a>

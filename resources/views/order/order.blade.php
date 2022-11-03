@@ -3,7 +3,7 @@
 <div class="container mt-5">
     @if(count($orders) < 1)
     <div class="col-sm-12 text-center">
-                <img src="{{asset('img/order.png')}}" class="img-fluid mb-4">
+                <img src="{{asset('img/order.png')}}" class="img-fluid mb-4" alt="no order">
                 <h3><strong>Vous n'avez aucune commande</strong></h3>
                 <h4>Commencez vos achats ci-dessous :)</h4>
                 <a href="{{route('homepage')}}" class="btn btn-success cart-btn-transform m-3" data-abc="true">Retour à l'accueil</a>
